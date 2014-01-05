@@ -67,9 +67,13 @@ else if (/^(right|left|top|bottom)$/.test(argv._[0])) {
         })[0];
         if (!target) return exit('no target display detected');
         
+        var xof = argv._[0] + '-of';
+        if (xof === 'top-of') xof = 'above';
+        if (xof === 'bottom-of') xof = 'below';
+        
         var args = [
             '--output', target, '--auto',
-            '--' + argv._[0] + '-of', primary
+            '--' + xof, primary
         ];
         spawn('xrandr', args, { stdio: 'inherit' });
     });
