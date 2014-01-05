@@ -81,6 +81,9 @@ else if (/^(right|left|top|bottom|above|below)$/.test(argv._[0])) {
         spawn('xrandr', args, { stdio: 'inherit' });
     });
 }
+else if (argv._[0] === 'reset') {
+    spawn('xrandr', [ '--auto' ], { stdio: 'inherit' });
+}
 else usage(1);
 
 function usage (code) {
