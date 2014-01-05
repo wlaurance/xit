@@ -1,6 +1,6 @@
 {
   "name": "xit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "configure an external display on linux",
   "bin": { "xit": "bin/cmd.js" },
   "dependencies": {
