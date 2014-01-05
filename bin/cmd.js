@@ -52,7 +52,7 @@ if (argv._[0] === 'mirror') {
         spawn('xrandr', args, { stdio: 'inherit' });
     });
 }
-else if (/^(right|left|top|bottom)$/.test(argv._[0])) {
+else if (/^(right|left|top|bottom|above|below)$/.test(argv._[0])) {
     query(function (err, displays) {
         var keys = Object.keys(displays);
         if (keys.length === 0) return exit('no displays detected');
@@ -67,9 +67,12 @@ else if (/^(right|left|top|bottom)$/.test(argv._[0])) {
         })[0];
         if (!target) return exit('no target display detected');
         
-        var xof = argv._[0] + '-of';
-        if (xof === 'top-of') xof = 'above';
-        if (xof === 'bottom-of') xof = 'below';
+        var xof = {
+            left: 'left-of',
+            right: 'right-of',
+            'top': 'above',
+            bottom: 'below'
+        }[argv._[0]] || xof;
         
         var args = [
             '--output', target, '--auto',
