@@ -1,0 +1,12 @@
+usage:
+
+  xit mirror
+
+    Mirror the current primary resolution to the external display resolution,
+    with changing the current primary resolution or geometry.
+
+  xit right, xit left, xit top, xit bottom
+
+    Set up the display to the right, left, top, or bottom of the primary
+    display.
+

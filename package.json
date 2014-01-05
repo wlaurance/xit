@@ -1,0 +1,27 @@
+{
+  "name": "xit",
+  "version": "0.0.0",
+  "description": "configure an external display on linux",
+  "bin": { "xit": "bin/cmd.js" },
+  "dependencies": {
+    "minimist": "~0.0.5",
+    "xrandr-parse": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/xit.git"
+  },
+  "homepage": "https://github.com/substack/xit",
+  "keywords": [
+    "xrandr",
+    "x11",
+    "linux",
+    "anarchyos"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}
